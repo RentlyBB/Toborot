@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour{
-    
+
     public float speed = 100f;
+
+    public LayerMask layerMask;
 
     public Vector3 pos;
 
@@ -40,7 +42,7 @@ public class Movement : MonoBehaviour{
 
     //Vypocita vzdalenost od hrace k nejblizsimu stene v dannem smeru 
     float calculateRayCastDistance(Vector2 dir){
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 500);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 500, ~layerMask);
         return hit.distance - 0.5f;
     }
 
