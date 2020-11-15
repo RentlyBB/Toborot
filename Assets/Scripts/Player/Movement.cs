@@ -27,15 +27,15 @@ public class Movement : MonoBehaviour{
 
     void toEdgeMovemet(){
         if(transform.position == nextPos) {
-            if(Input.GetKey(KeyCode.W)) {
+            if(Input.GetKey(KeyCode.W)) 
                 nextPos += new Vector3(0, calculateRayCastDistance(Vector2.up), 0);
-            } else if(Input.GetKey(KeyCode.S)) {
+             else if(Input.GetKey(KeyCode.S)) 
                 nextPos -= new Vector3(0, calculateRayCastDistance(Vector2.down), 0);
-            } else if(Input.GetKey(KeyCode.A)) {
+             else if(Input.GetKey(KeyCode.A)) 
                 nextPos -= new Vector3(calculateRayCastDistance(Vector2.left), 0, 0);
-            } else if(Input.GetKey(KeyCode.D)) {
+             else if(Input.GetKey(KeyCode.D)) 
                 nextPos += new Vector3(calculateRayCastDistance(Vector2.right), 0, 0);
-            }
+            
         }
         transform.position = Vector3.MoveTowards(transform.position, nextPos, Time.deltaTime * movementSpeed);
     }
