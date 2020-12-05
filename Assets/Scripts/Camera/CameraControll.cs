@@ -19,7 +19,6 @@ public class CameraControll : MonoBehaviour{
              }
          }
 
-        Debug.Log(vCams.Count);
     }
     private void Update() {
         if(Input.GetKeyDown(KeyCode.UpArrow)){

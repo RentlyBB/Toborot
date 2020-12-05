@@ -8,6 +8,7 @@ TagManager:
   - vCams
   - NextTrigger
   - BackTrigger
+  - MoveableObject
   layers:
   - Default
   - TransparentFX
