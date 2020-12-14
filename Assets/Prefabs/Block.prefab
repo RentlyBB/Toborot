@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7568564956516431844}
   - component: {fileID: 7568564956516431845}
   - component: {fileID: 7568564956516431846}
-  - component: {fileID: 7568564956516431847}
   - component: {fileID: 7568564956516431842}
   - component: {fileID: 7568564956516431843}
   m_Layer: 8
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 4796926150619662861, guid: 265d07e0cad881046a30db3e7c25090c,
     type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.9345741, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -105,18 +104,6 @@ MonoBehaviour:
   movementSpeed: 30
   isMoving: 0
   tempObj: {fileID: 0}
---- !u!114 &7568564956516431847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7568564956516431840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 347e01729718e4345bf8b9e357c22343, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &7568564956516431842
 BoxCollider2D:
   m_ObjectHideFlags: 0
