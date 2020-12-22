@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 6485961578430842116}
   - component: {fileID: 1388123171}
   - component: {fileID: 826076288389355506}
-  - component: {fileID: 1388123175}
   - component: {fileID: 1004908324}
-  - component: {fileID: 1004908320}
+  - component: {fileID: 4299322786727796057}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -118,18 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9647720b6f49ee04cbd4627a8ac7fd02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1388123175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6485961578430842171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 347e01729718e4345bf8b9e357c22343, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1004908324
 Rigidbody2D:
   serializedVersion: 4
@@ -151,7 +138,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1004908320
+--- !u!61 &4299322786727796057
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,5 +162,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.99, y: 0.99}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0

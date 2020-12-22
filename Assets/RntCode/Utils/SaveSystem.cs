@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System.IO;
 using System;
-using System.Collections.Generic;
 
 namespace RntCode.Utils {
     public static class SaveSystem {
@@ -13,6 +11,7 @@ namespace RntCode.Utils {
 
         /// <summary>
         /// Create folder if not exist.
+        /// Best to invoke before game starts.
         /// </summary>
         public static void Init(){
             if(!Directory.Exists(SAVE_FOLDER_PATH)){

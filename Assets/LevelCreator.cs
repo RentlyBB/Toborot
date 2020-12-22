@@ -6,33 +6,31 @@ using RntCode.Utils;
 
 public class LevelCreator : MonoBehaviour{
 
-    CustomGridScript<GameObject> girdOfObjects;
+    public enum TileMap{
+        none = 0,
+        grass = 1,
+        dirt = 2,
+    }
+
+    CustomGridScript<TileMap> girdOfObjects;
+    public TileMap selectedTile;
 
     // Start is called before the first frame update
-    void Start(){
-        girdOfObjects = new CustomGridScript<GameObject>(5, 5, 5, new Vector3(0,0), () => null);
-        SaveSystem.Init();
+    private void Start(){
+        girdOfObjects = new CustomGridScript<TileMap>(30, 17, 0.64f, Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)), () => TileMap.none, true, 5);
     }
+    public void selectCustomTile(int tileMap){
 
-    // Update is called once per frame
-    void Update(){
-        if(Input.GetKeyDown(KeyCode.O)){
-            DataToSave dataToSave = new DataToSave(transform.position);
-            string stringToSave = JsonUtility.ToJson(dataToSave);
-            Debug.Log(stringToSave);
-            SaveSystem.save(stringToSave, "Ahoj");
-        }
-
-        if(Input.GetKeyDown(KeyCode.L)) {
-            DataToSave loadedObject = JsonUtility.FromJson<DataToSave>(SaveSystem.load());
-            Debug.Log("LOADED Specific position: " + loadedObject.position);
-        }
-    }
-
-    public class DataToSave{
-        public Vector2 position;
-        public DataToSave(Vector2 position){
-            this.position = position;
+        switch(tileMap){
+            case 0:
+                selectedTile = TileMap.none;
+                break;
+            case 1:
+                selectedTile = TileMap.grass;
+                break;
+            case 2:
+                selectedTile = TileMap.dirt;
+                break;
         }
     }
 }

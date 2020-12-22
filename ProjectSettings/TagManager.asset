@@ -9,6 +9,7 @@ TagManager:
   - NextTrigger
   - BackTrigger
   - MoveableObject
+  - RntCanvas
   layers:
   - Default
   - TransparentFX

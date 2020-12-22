@@ -63,7 +63,7 @@ public class FourDirMovement : MonoBehaviour {
         RaycastHit2D hit = Physics2D.Raycast(transform.position + ((Vector3)moveDirection / 2), moveDirection, 500, ~layerMask);
 
         if(hit.transform.CompareTag("Player") || hit.transform.CompareTag("MoveableObject")){
-            if(/*hit.distance < 1 || */hit.transform.GetComponent<FourDirMovement>().isMoving){
+            if(hit.transform.GetComponent<FourDirMovement>().isMoving){
                 return 0;
             }
             tempDir = moveDirection;
@@ -84,12 +84,5 @@ public class FourDirMovement : MonoBehaviour {
     float calculateRayCastDistanceDebug(Vector2 moveDirection) {
         RaycastHit2D hit = Physics2D.Raycast(transform.position + ((Vector3)moveDirection / 2), moveDirection, 500, ~layerMask);
         return hit.distance;
-    }
-
-    [CustomEditor(typeof(FourDirMovement))]
-    public class MovementEditor : Editor {
-        public override void OnInspectorGUI() {
-            base.OnInspectorGUI();
-        }
     }
 }
